@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamka Retail Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
+    header { background-color: #4a148c; color: #fff; display: flex; align-items: center; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; }
+    .logo { font-weight: bold; font-size: 1.5rem; }
+    .search-bar { flex: 1; margin: 0 20px; }
+    .search-bar input { width: 100%; padding: 8px; border: none; border-radius: 4px; }
+    nav a { margin: 0 10px; text-decoration: none; font-weight: 500; color: #ffeb3b; }
+    nav a:hover { text-decoration: underline; }
+    .section { padding: 20px; max-width: 1000px; margin: auto; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { border-bottom: 2px solid #4a148c; padding-bottom: 0.5rem; color: #4a148c; }
+    .offer-grid, .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding-top: 10px; }
+    .offer-card { background-color: #e1bee7; border-radius: 8px; padding: 10px; text-align: center; font-weight: bold; color: #4a148c; }
+    .product-card { background-color: #f3e5f5; border-radius: 8px; padding: 10px; text-align: center; }
+    .product-card img { width: 70%; height: auto; object-fit: cover; border-radius: 8px; }
+    .product-name { font-weight: bold; margin: 10px 0 5px; color: #4a148c; }
+    .price { font-weight: bold; color: #2e7d32; }
+    .old-price { text-decoration: line-through; font-size: 0.9rem; color: #888; }
+    footer { background-color: #4a148c; color: #fff; text-align: center; padding: 20px; font-size: 0.9rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Lamka Retail Shop</div>
+    <div class="search-bar"><input type="text" placeholder="Search for Products..."></div>
+    <nav>
+      <a href="#offers">Top Offers</a>
+      <a href="#smart-basket">Smart Basket</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="special-deals.html">Special Deals</a>
+    </nav>
+  </header>
+
+  <section id="offers" class="section">
+    <h2>Top Offers</h2>
+    <div class="offer-grid">
+  <a href="deals-of-the-week.html" class="offer-card">DEALS OF THE WEEK</a>
+  <a href="big-pack-bigger-discounts.html" class="offer-card">BIG PACK BIGGER DISCOUNTS</a>
+  <a href="combos-you-cant-miss.html" class="offer-card">COMBOS YOU CAN’T MISS</a>
+  <a href="rs30-corner.html" class="offer-card">THE ₹30 CORNER</a>
+      
+    </div>
+  </section>
+
+  <section id="smart-basket" class="section">
+    <h2>My Smart Basket</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="https://i.ibb.co/0jFLn6Fb/capsicum.jpg" alt="Capsicum"><div class="product-name"><a href="capsicum.html">Capsicum - Green</a></div><div class="price">₹115.2 <span class="old-price">₹144</span></div></div>
+      <div class="product-card"><img src="https://i.ibb.co/W4cCdTY5/carrot.jpg" alt="Carrot"><div class="product-name"><a href="carrot.html">Carrot - Orange</a></div><div class="price">₹119.2 <span class="old-price">₹149</span></div></div>
+      <div class="product-card"><img src="https://i.ibb.co/HLBnGsT7/cauliflower.jpg" alt="Cauliflower"><div class="product-name"><a href="cauliflower.html">Cauliflower</a></div><div class="price">₹34.4 <span class="old-price">₹43</span></div></div>
+      <div class="product-card"><img src="https://i.ibb.co/hFXhDXr1/Coriander-Leaves.jpg" alt="Coriander"><div class="product-name"><a href="coriander.html">Coriander Leaves</a></div><div class="price">₹291.08 <span class="old-price">₹383</span></div></div>
+    </div>
+  </section>
+
+  <section id="categories" class="section">
+    <h2>Fruits and Vegetables</h2>
+    <div class="offer-grid">
+  <a href="deals-of-the-week.html" class="offer-card">DEALS OF THE WEEK</a>
+  <a href="big-pack-bigger-discounts.html" class="offer-card">BIG PACK BIGGER DISCOUNTS</a>
+  <a href="combos-you-cant-miss.html" class="offer-card">COMBOS YOU CAN’T MISS</a>
+  <a href="rs30-corner.html" class="offer-card">THE ₹30 CORNER</a>
+      <div class="offer-card">Fresh Vegetables MIN 27% OFF</div>
+      <div class="offer-card">Fresh Fruits MIN 27% OFF</div>
+      <div class="offer-card">Cuts & Exotics MIN 27% OFF</div>
+      <div class="offer-card">Herbs & Seasonings MIN 27% OFF</div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Lamka Retail Shop is committed to being Earth's most customer-centric company. We aim to offer customers the lowest prices, best selection, and utmost convenience, inspired by industry leaders.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:support@lamkaretailshop.com">support@lamkaretailshop.com</a><br>
+    Phone: +91-123-456-7890<br>
+    Customer support available 24/7.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Lamka Retail Shop | Terms | Privacy | Contact Us
+  </footer>
+
+</body>
+</html>

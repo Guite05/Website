@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capsicum - Green</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 20px; }
+    header { background-color: #4a148c; color: #fff; padding: 10px 20px; }
+    h1 { color: #4a148c; }
+    a { color: #4a148c; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
+    .content { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; }
+    button { margin-top: 15px; padding: 10px 20px; background-color: #4a148c; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .amount { font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Capsicum - Green</h1>
+  </header>
+
+  <div class="content">
+    <p>Select quantity, provide delivery address and choose your payment method:</p>
+    <form>
+      <label>Quantity:
+        <input type="number" id="quantity" name="quantity" min="1" value="1" onchange="updateAmount()">
+      </label>
+      <label>Delivery Address:
+        <input type="text" name="address" placeholder="Enter your address">
+      </label>
+      <label>Payment Method:
+        <select name="payment">
+          <option value="upi">UPI</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="debit-card">Debit Card</option>
+          <option value="cod">Cash on Delivery (CoD)</option>
+        </select>
+      </label>
+      <div class="amount">Total Amount: ₹<span id="totalAmount">115.2</span></div>
+      <button type="submit">Place Order</button>
+    </form>
+    <p><a href="index_with_product_links.html">← Back to Home</a></p>
+  </div>
+
+  <script>
+    const unitPrice = 115.2;
+    function updateAmount() {
+      const qty = document.getElementById("quantity").value;
+      const amt = (qty * unitPrice).toFixed(2);
+      document.getElementById("totalAmount").innerText = amt;
+    }
+    window.onload = updateAmount;
+  </script>
+
+</body>
+</html>
